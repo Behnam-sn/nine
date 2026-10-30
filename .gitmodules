@@ -1,3 +1,6 @@
 [submodule "apps/nine-backend-cs"]
 	path = apps/nine-backend-cs
 	url = https://github.com/Behnam-sn/nine-backend-cs.git
+[submodule "apps/nine-frontend-tsx"]
+	path = apps/nine-frontend-tsx
+	url = https://github.com/Behnam-sn/nine-frontend-tsx.git
