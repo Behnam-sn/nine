@@ -1,0 +1,175 @@
+# Tasks
+
+## Backlog
+
+- [ ] Add `Version` to `Account`
+
+## Todo
+
+- [ ] Add `Nine.Contents.Domain` project in `Contents` folder
+- [ ] Reference `Nine.SharedKernel` to `Nine.Contents.Domain`
+- [ ] Add `Nine.Contents.Domain.Tests` project in `Contents` folder
+- [ ] Reference `Nine.Contents.Domain` to `Nine.Contents.Domain.Tests`
+- [ ] Add `Post` aggregate root in `Nine.Contents.Domain`
+- [ ] Add `PostTests` in `Nine.Contents.Domain.Tests`
+- [ ] Host
+- [ ] Add swagger
+- [ ] Add error handling in web api controllers (account)
+- [ ] Add Serilog
+
+## Doing
+
+- [ ] Add email verification command
+- [ ] Add profiles end-to-end tests
+- [ ] Add Visibility to profile
+- [ ] Add Status to profile
+- [ ] Add `IUserCommandRepository`
+
+## Done
+
+- [x] Convert `UserFirstNameChangedDomainEventV1` constructor to a primary constructor
+- [x] Use value objects in events
+- [x] Use `FirstName` value object to `User`
+- [x] Use `LastName` value object to `User`
+- [x] Add `ChangeLastName` method to `User`
+- [x] Replace `Create` method with a constructor in `User`
+- [x] Add `Email` to `User`
+- [x] Create `PhoneNumber` value object
+- [x] Add `PhoneNumber` to `User`
+- [x] Create `Username` value object
+- [x] Add `Username` to `User`
+- [x] Create `UserStates` enum
+- [x] Add `State` property to `User`
+- [x] Create `Name` value object in `Users`
+- [x] Replace `FirstName` and `LastName` with `Name` in `User`
+- [x] Add `CreateInstance` method to `User`
+- [x] Rename `ChangeName` to `SetName` in `User`
+- [x] Create `Nine.SharedKernel` project
+- [x] Move `Abstractions` from `Nine.Domain` to `Nine.SharedKernel`
+- [x] Create `Nine.Identities.Domain` project
+- [x] Reference `Nine.SharedKernel` to `Nine.Identities.Domain`
+- [x] Move `Users` from `Nine.Domain` to `Nine.Identities.Domain`
+- [x] Change `Create` method access level from `internal` to `public` in `DomainEventId`
+- [x] Remove `Nine.Domain` project
+- [x] Add `Nine.Identities.Domain.Tests` project in `Identities` folder
+- [x] Reference `Nine.Identities.Domain` to `Nine.Identities.Domain.Tests`
+- [x] Add `UserTests` class in `Nine.Identities.Domain.Tests`
+- [x] Add `NuGet.config` to `Nine.sln`
+- [x] Add `FluentAssertions` to `Nine.Identities.Domain.Tests.csproj`
+- [x] Move `UserTests` to `Users/Entities` in `Nine.Identities.Domain.Tests`
+- [x] Add `CreateInstance_ShouldRaiseUserCreatedDomainEvent` to `UsersTests`
+- [x] Rename `userCreatedEvent` to `userCreatedDomainEvent` in `CreateInstance` in `User`
+- [x] Add `SetName_ShouldRaiseUserNameChangedDomainEvent` to `UsersTests`
+- [x] Add `SetEmail_ShouldRaiseUserEmailChangedDomainEvent` to `UsersTests`
+- [x] Add `SetPhoneNumber_ShouldRaiseUserPhoneNumberChangedDomainEvent` to `UsersTests`
+- [x] Rename `UserPhoneNumberChangedDomainEvent` to `UserPhoneNumberChangedDomainEventV1`
+- [x] Rename `UserUsernameChangedDomainEvent` to `UserUsernameChangedDomainEventV1`
+- [x] Change `UserUsernameChangedDomainEventV1` type to `sealed`
+- [x] Add `SetUsername_ShouldRaiseUserUsernameChangedDomainEvent` to `UsersTests`
+- [x] Add `ApplyingUserCreatedDomainEvent_ShouldInitializeProperties` to `UsersTests`
+- [x] Rename `ApplyingUserCreatedDomainEvent_ShouldInitializeProperties` to `ApplyingUserCreatedDomainEventV1_ShouldInitializeProperties` in `UserTests`
+- [x] Create `UserApplyDomainEventTests` in `Nine.Identities.Domain.Tests.Users.Entities`
+- [x] Move `ApplyingUserCreatedDomainEventV1_ShouldInitializeProperties` to `UserApplyDomainEventTests`
+- [x] Rename `UserTests` to `UserRaiseDomainEventTests`
+- [x] Rename `UserRaiseDomainEventTests` to `UserTests`
+- [x] Remove  `UserApplyDomainEventTests`
+- [x] Change `CreateInstance_ShouldRaiseUserCreatedDomainEvent` to `CreateInstance_ShouldRaiseUserCreatedDomainEventV1AndUpdateState` in `UserTests`
+- [x] Rename `CreateInstance_ShouldRaiseUserCreatedDomainEventV1AndUpdateState` to `CreateInstance_ShouldRaiseAndApplyUserCreatedDomainEventV1` in `UserTests`
+- [x] Change `SetName_ShouldRaiseUserNameChangedDomainEvent` to `SetName_ShouldRaiseAndApplyUserNameChangedDomainEventV1` in `UserTests`
+- [x] Apply `userNameChangedDomainEvent` in `SetPhoneNumber` in `User`
+- [x] Rename `Apply` to `ApplyDomainEvent` in `User`
+- [x] Change `SetEmail_ShouldRaiseUserEmailChangedDomainEvent` to `SetEmail_ShouldRaiseAndApplyUserEmailChangedDomainEventV1` in `UserTests`
+- [x] Apply `userEmailChangedDomainEvent` in `SetEmail` in `User`
+- [x] Change `SetPhoneNumber_ShouldRaiseUserPhoneNumberChangedDomainEvent` to `SetPhoneNumber_ShouldRaiseAndApplyUserPhoneNumberChangedDomainEventV1` in `UserTests`
+- [x] Apply `userPhoneNumberChangedDomainEvent` in `SetPhoneNumber` in `User`
+- [x] Change `SetUsername_ShouldRaiseUserUsernameChangedDomainEvent` to `SetUsername_ShouldRaiseAndApplyUserUsernameChangedDomainEventV1` in `UserTests`
+- [x] Apply `userUsernameChangedDomainEvent` in `SetUsername` in `User`
+- [x] Rename `UserBuilder` to `UserTestBuilder`
+- [x] Change `UserTestBuilder` access level from `public` to `internal`
+- [x] Add `UserIdTests` to `Nine.Identities.Domain.Tests.Users.ValueObjects`
+- [x] Add `Create_ShouldGenerateUniqueId` to `UserIdTests`
+- [x] Add `Parse_ShouldReturnCorrectId` to `UserIdTests`
+- [x] Add `NameTests` to `Nine.Identities.Domain.Tests.Users.ValueObjects`
+- [x] Add `Create_ShouldSetValue` to `NameTests`
+- [x] Add `Create_WithNull_ShouldThrowNameCannotBeEmptyException` to `NameTests`
+- [x] Throw `NameCannotBeEmptyException` if `value` is empty in `Create` in `Name`
+- [x] Add `Create_WithEmpty_ShouldThrowNameCannotBeEmptyException` to `NameTests`
+- [x] Add `Create_WithWhitespace_ShouldThrowNameCannotBeEmptyException` to `NameTests`
+- [x] Merge `Create_WithNull_ShouldThrowNameCannotBeEmptyException`, `Create_WithEmpty_ShouldThrowNameCannotBeEmptyException` and `Create_WithWhitespace_ShouldThrowNameCannotBeEmptyException` into `Create_WithNullOrEmptyOrWhitespace_ShouldThrowNameCannotBeEmptyException` to `NameTests`
+- [x] Add `Create_WithTooLongValue_ShouldThrowNameTooLongException` to `NameTests`
+- [x] Add `Arrange`, `Act`, `Assert` comments to `UserIdTests`
+- [x] Add `Create_ShouldTrimLeadingAndTrailingWhitespace` to `NameTests`
+- [x] Add `EmailTests` to `Nine.Identities.Domain.Tests.Users.ValueObjects`
+- [x] Add `Create_ShouldSetValue` to `EmailTests`
+- [x] Add `Create_ShouldTrimLeadingAndTrailingWhitespace` to `EmailTests`
+- [x] Add `Create_WithNullOrEmptyOrWhitespace_ShouldThrowEmailCannotBeEmptyException` to `EmailTests`
+- [x] Add `Create_WithInvalidFormat_ShouldThrowEmailInvalidFormatException` to `EmailTests`
+- [x] Add `PhoneNumberTests` to `Nine.Identities.Domain.Tests.Users.ValueObjects`
+- [x] Add `Create_ShouldSetValue` to `PhoneNumberTests`
+- [x] Add `Create_ShouldTrimLeadingAndTrailingWhitespace` to `PhoneNumberTests`
+- [x] Rename `phone` to `input` in `Create_ShouldSetValue` in `PhoneNumberTests`
+- [x] Add `Create_WithNullOrEmptyOrWhitespace_ShouldThrowPhoneNumberCannotBeEmptyException` to `PhoneNumberTests`
+- [x] Add `Create_WithInvalidFormat_ShouldThrowPhoneNumberInvalidFormatException` to `PhoneNumberTests`
+- [x] Remove `Username` from `User`
+- [x] Rename `User` to `Account`
+- [x] Remove `Archived` from `AccountStates`
+- [x] Remove `Name` from `Account`
+- [x] Add `From_ShouldReturnCorrectId` to `AccountIdTests`
+- [x] Add `From_WithEmptyGuid_ShouldThrowAccountIdCannotBeEmptyException` to `AccountIdTests`
+- [x] Add `Parse_ShouldThrow_WhenInvalidFormat` to `AccountIdTests`
+- [x] Change `Email` type to `readonly partial record struct`
+- [x] Add `Create_ShouldNormaliseToLowercase` to `EmailTests`
+- [x] Merge `Create_ShouldTrimLeadingAndTrailingWhitespace` and `Create_ShouldNormaliseToLowercase` to `Create_ShouldNormaliseValue` in `EmailTests`
+- [x] Rename `InvalidAccountIdFormatException` to `AccountIdInvalidFormatException`
+- [x] Change `PhoneNumber` type to `readonly partial record struct`
+- [x] Change `Create_ShouldSetValue` to `Create_ShouldNormaliseToE164` in `PhoneNumberTests`
+- [x] Remove `State` from `Account`
+- [x] Remove `AccountNameChangedDomainEventV1`
+- [x] Add `VerifyEmail_ShouldRaiseAndApplyAccountEmailVerifiedDomainEventV1` to `AccountIdTests`
+- [x] Add `VerifyPhoneNumber_ShouldRaiseAndApplyAccountPhoneNumberVerifiedDomainEventV1` to `AccountIdTests`
+- [x] Change `PhoneNumber` in `Account` to optional
+- [x] Add `VerifyEmail_ShouldNotRaiseAccountEmailVerifiedDomainEventV1_WhenEmailIsAlreadyVerified` to `AccountIdTests`
+- [x] Add `VerifyPhoneNumber_ShouldNotRaiseAccountPhoneNumberVerifiedDomainEventV1_WhenPhoneNumberIsAlreadyVerified` to `AccountIdTests`
+- [x] Add `VerifyPhoneNumber_WhenPhoneNotSet_ShouldThrowAccountPhoneNumberNotSetException` to `AccountIdTests`
+- [x] Add `CredentialId` to `Nine.Identities.Domain.Accounts.ValueObjects`
+- [x] Add `CredentialIdTests` to `Nine.Identities.Domain.Tests.Accounts.ValueObjects`
+- [x] Add `Create_ShouldGenerateUniqueId` to `CredentialIdTests`
+- [x] Add `From_ShouldReturnCorrectId` to `CredentialIdTests`
+- [x] Add `From_WithEmptyGuid_ShouldThrowCredentialIdCannotBeEmptyException` to `CredentialIdTests`
+- [x] Add `Parse_ShouldReturnCorrectId` to `CredentialIdTests`
+- [x] Add `Parse_WithInvalidFormat_ShouldThrowCredentialIdInvalidFormatException` to `CredentialIdTests`
+- [x] Add `HashedSecret` to `Nine.Identities.Domain.Accounts.ValueObjects`
+- [x] Add `Credential` to `Nine.Identities.Domain.Accounts.Entities`
+- [x] Add `AddCredential_WithDuplicateType_ShouldThrowCredentialAlreadyExistsException` to `AccountTests`
+- [x] Rename `Email` to `EmailAddress`
+- [x] Rename `Phone` to `PhoneNumber`
+- [x] Rename `OccurredAt` to `Timestamp` in `IDomainEvent`
+- [x] Add `Nine.Identities.Domain.Contracts` project
+- [x] Add `Nine.Identities.Application` project
+- [x] Install `MediatR` in `Nine.SharedKernel`
+- [x] Add `Messaging` to `Nine.SharedKernel.Abstractions`
+- [x] Add `CreateAccountWithPasswordCommand` to `Nine.Identities.Application.Accounts.Commands`
+- [x] Use default value objects instead default values in `AccountTests`
+- [x] Add `CreateWithPassword` to `AccountsWebApiController` in `Nine.Identities.Presentation.Accounts.WebApi`
+- [x] Add api versioning to `AccountsWebApiController`
+- [x] Add `Nine.Identities.Infrastructure` project
+- [x] Add `AccountCommandRepository` to `Nine.Identities.Infrastructure.Accounts.Repositories`
+- [x] Add `AccountEmailAddressUniquenessChecker` to `Nine.Identities.Infrastructure.Accounts.Services`
+- [x] Add `AccountPhoneNumberUniquenessChecker` to `Nine.Identities.Infrastructure.Accounts.Services`
+- [x] Add `PasswordHasher` to `Nine.Identities.Infrastructure.Accounts.Services`
+- [x] Add `IdentitiesConfiguration` to `Nine.WebApi.Configurations`
+- [x] Add `AssemblyReference` to projects
+- [x] Add `Nine.WebApi.Tests` project
+- [x] Add `Nine.Profiles` projects
+- [x] Add `Profile` aggregate root in `Nine.Profiles.Domain.Profiles.Entities`
+- [x] Add `ProfileIdTests` in `Nine.Profiles.Domain.Tests.Profiles.ValueObjects`
+- [x] Add `ProfileNameTests` in `Nine.Profiles.Domain.Tests.Profiles.ValueObjects`
+- [x] Add `ProfileHandleTests` in `Nine.Profiles.Domain.Tests.Profiles.ValueObjects`
+- [x] Add `ProfileAvatarTests` in `Nine.Profiles.Domain.Tests.Profiles.ValueObjects`
+- [x] Add `ProfileBioTests` in `Nine.Profiles.Domain.Tests.Profiles.ValueObjects`
+- [x] Add `ProfileTests` in `Nine.Profiles.Domain.Tests.Profiles.Entities`
+- [x] Add `CreateProfileCommandV1` in `Nine.Profiles.Application.Profiles.Commands.Create`
+- [x] Add `ProfileWebApiController` in `Nine.Profiles.Presentation.Profiles.WebApi.Controllers`
+- [x] Implement `Nine.Profiles.Infrastructure.Profiles`
+- [x] Fill `MapException` in `ProfileExceptionHandler` with exceptions in `Nine.Profiles.Domain.Contracts.Profiles.Exceptions`
+- [x] Add `Nine.Shared` projects
