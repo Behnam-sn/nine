@@ -1,4 +1,4 @@
-# Tasks
+# Backend Tasks
 
 ## Backlog
 
@@ -12,9 +12,6 @@
 - [ ] Reference `Nine.Contents.Domain` to `Nine.Contents.Domain.Tests`
 - [ ] Add `Post` aggregate root in `Nine.Contents.Domain`
 - [ ] Add `PostTests` in `Nine.Contents.Domain.Tests`
-- [ ] Host
-- [ ] Add swagger
-- [ ] Add error handling in web api controllers (account)
 - [ ] Add Serilog
 
 ## Doing
@@ -24,6 +21,14 @@
 - [ ] Add Visibility to profile
 - [ ] Add Status to profile
 - [ ] Add `IUserCommandRepository`
+- [ ] Add `Login` endpoint to `AuthEndpoints`
+- [ ] Add `Me` endpoint to `AuthEndpoints`
+- [ ] Add identity seed data
+- [ ] Add `Register` tests to `AuthTests`
+- [ ] Add `Login` tests to `AuthTests`
+- [ ] Add `Me` tests to `AuthTests`
+- [ ] Add `Create` endpoint to `UsersEndpoints`
+- [ ] Add `Get` endpoint to `UsersEndpoints`
 
 ## Done
 
@@ -72,7 +77,7 @@
 - [x] Move `ApplyingUserCreatedDomainEventV1_ShouldInitializeProperties` to `UserApplyDomainEventTests`
 - [x] Rename `UserTests` to `UserRaiseDomainEventTests`
 - [x] Rename `UserRaiseDomainEventTests` to `UserTests`
-- [x] Remove  `UserApplyDomainEventTests`
+- [x] Remove `UserApplyDomainEventTests`
 - [x] Change `CreateInstance_ShouldRaiseUserCreatedDomainEvent` to `CreateInstance_ShouldRaiseUserCreatedDomainEventV1AndUpdateState` in `UserTests`
 - [x] Rename `CreateInstance_ShouldRaiseUserCreatedDomainEventV1AndUpdateState` to `CreateInstance_ShouldRaiseAndApplyUserCreatedDomainEventV1` in `UserTests`
 - [x] Change `SetName_ShouldRaiseUserNameChangedDomainEvent` to `SetName_ShouldRaiseAndApplyUserNameChangedDomainEventV1` in `UserTests`
@@ -173,3 +178,4 @@
 - [x] Implement `Nine.Profiles.Infrastructure.Profiles`
 - [x] Fill `MapException` in `ProfileExceptionHandler` with exceptions in `Nine.Profiles.Domain.Contracts.Profiles.Exceptions`
 - [x] Add `Nine.Shared` projects
+- [x] Add `Register` endpoint to `AuthEndpoints`
