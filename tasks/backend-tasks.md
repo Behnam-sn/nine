@@ -3,6 +3,7 @@
 ## Backlog
 
 - [ ] Add `Version` to `Account`
+- [ ] Add Serilog
 
 ## Todo
 
@@ -12,20 +13,19 @@
 - [ ] Reference `Nine.Contents.Domain` to `Nine.Contents.Domain.Tests`
 - [ ] Add `Post` aggregate root in `Nine.Contents.Domain`
 - [ ] Add `PostTests` in `Nine.Contents.Domain.Tests`
-- [ ] Add Serilog
-
-## Doing
-
 - [ ] Add email verification command
 - [ ] Add profiles end-to-end tests
 - [ ] Add Visibility to profile
 - [ ] Add Status to profile
 - [ ] Add `IUserCommandRepository`
-- [ ] Add `Login` endpoint to `AuthEndpoints`
+
+## Doing
+
 - [ ] Add `Me` endpoint to `AuthEndpoints`
 - [ ] Add identity seed data
-- [ ] Add `Register` tests to `AuthTests`
-- [ ] Add `Login` tests to `AuthTests`
+- [ ] Add `SignUp` tests to `AuthTests`
+- [ ] Add `SignIn` tests to `AuthTests`
+- [ ] Add `SignOut` tests to `AuthTests`
 - [ ] Add `Me` tests to `AuthTests`
 - [ ] Add `Create` endpoint to `UsersEndpoints`
 - [ ] Add `Get` endpoint to `UsersEndpoints`
@@ -179,3 +179,7 @@
 - [x] Fill `MapException` in `ProfileExceptionHandler` with exceptions in `Nine.Profiles.Domain.Contracts.Profiles.Exceptions`
 - [x] Add `Nine.Shared` projects
 - [x] Add `Register` endpoint to `AuthEndpoints`
+- [x] Add `Login` endpoint to `AuthEndpoints`
+- [x] Rename `Register` to `SignUp`
+- [x] Rename `Login` to `SignIn`
+- [x] Add `SignOut` endpoint to `AuthEndpoints`
